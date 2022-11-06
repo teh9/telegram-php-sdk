@@ -1,4 +1,8 @@
-# Telegram PHP SDK
+# <center>Telegram PHP SDK</center>
+
+![Packagist Downloads](https://img.shields.io/packagist/dt/teh9/telegram-php-sdk)
+![Packagist Version](https://img.shields.io/packagist/v/teh9/telegram-php-sdk)
+![Packagist License](https://img.shields.io/packagist/l/teh9/telegram-php-sdk)
 
 PHP library for Telegram API, possible to send messages from bot to user.
 
