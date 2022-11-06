@@ -1,0 +1,26 @@
+{
+    "name": "teh9/telegram-php-sdk",
+    "description": "Telegram PHP SDK",
+    "type": "library",
+    "keywords": ["php", "telegram", "php", "bot", "api"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Teh9\\TelegramPhpSdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "teh9",
+            "email": "tengizs.gusevs@gmail.com"
+        }
+    ],
+    "require": {
+      "ext-curl": "*",
+      "php": ">=7.4",
+      "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}
