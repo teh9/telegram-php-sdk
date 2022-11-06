@@ -16,7 +16,7 @@ class CurlHttpClient implements TransportClient
     /**
      * @param int $connection_timeout
      */
-    public function __construct(int $connection_timeout)
+    public function __construct (int $connection_timeout)
     {
         $this->initial_opts = array(
             CURLOPT_HEADER         => true,
@@ -45,7 +45,7 @@ class CurlHttpClient implements TransportClient
      * @return TransportClientResponse
      * @throws TransportRequestException
      */
-    public function sendRequest(string $url, array $opts)
+    public function sendRequest (string $url, array $opts): TransportClientResponse
     {
         $curl = curl_init($url);
 

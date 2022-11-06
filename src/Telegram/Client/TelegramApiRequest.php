@@ -34,10 +34,10 @@ class TelegramApiRequest
      * @param string $method
      * @param string $access_token
      * @param array $params
-     * @return bool|string
+     * @return array
      * @throws TelegramClientException
      */
-    public function post (string $method, string $access_token, array $params = array())
+    public function post (string $method, string $access_token, array $params = array()): array
     {
         $url = $this->host . $access_token . '/' . $method;
 
@@ -52,21 +52,22 @@ class TelegramApiRequest
 
     /**
      * @param TransportClientResponse $response
-     * @return array|mixed
+     * @return array
      */
-    private function parseResponse(TransportClientResponse $response)
+    private function parseResponse(TransportClientResponse $response): array
     {
         return $this->decodeBody($response->getBody());
     }
 
     /**
      * @param string $body
-     * @return mixed
+     * @return array
      */
-    protected function decodeBody(string $body) {
-        $decoded_body = json_decode($body);
+    protected function decodeBody(string $body): array
+    {
+        $decoded_body = json_decode($body, true);
 
-        if (!is_object($decoded_body)) {
+        if (!is_array($decoded_body)) {
             $decoded_body = [];
         }
 

@@ -25,10 +25,10 @@ class Messages
     /**
      * @param string $access_token
      * @param array $params
-     * @return bool|string
+     * @return array
      * @throws TelegramClientException
      */
-    public function send(string $access_token, array $params = [])
+    public function send(string $access_token, array $params = []): array
     {
         return $this->request->post('sendMessage', $access_token, $params);
     }
