@@ -2,6 +2,12 @@
 
 PHP library for Telegram API, possible to send messages from bot to user.
 
+## Instalation
+
+```
+composer require teh9/telegram-php-sdk
+```
+
 ## Usage
 
 Create TelegramApiClient object using the following code:
